@@ -3,6 +3,7 @@ export type GlogalLayoutProps = {
 }
 
 declare global {
+  type Maybe<T> = T | null | undefined;
   type StripMaybe<T> = Exclude<T, undefined | null | never>;
   type MergePrefer<T, U> = Partial<{
     [K in keyof T | keyof U]: K extends keyof T ? T[K] : K extends keyof U ? U[K] : never;

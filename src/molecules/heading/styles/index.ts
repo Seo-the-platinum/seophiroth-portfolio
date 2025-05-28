@@ -5,6 +5,7 @@ export const headingMoleculeContainer = cva('grid',{
     alignment: {
       center: 'm-auto max-w-[960px] grid-cols-1 place-items-center text-center grid-cols-1',
       left: '',
+      row: 'grid-cols-2',
     },
     size: {
       sm: 'gap-4',
@@ -20,7 +21,7 @@ export const headingStyles = cva('col-start-1 font-semibold text-heading',{
   variants: {
     size: {
       sm: 'text-display-sm dark:text-white sm:text-display-lg',
-      lg: 'text-display-md dark:text-heading-gradient sm:text-display-lg lg:text-display-xl',
+      lg: 'text-3xl sm:text-4xl lg:text-5xl',
     }
   },
   defaultVariants: {

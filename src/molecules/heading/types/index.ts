@@ -1,6 +1,6 @@
 export type HeadingMoleculeConfigProps = {
-  eyebrow: string
+  eyebrow?: string
   heading: string
   body: string
-  alignment: 'left' | 'center';
+  alignment: 'left' | 'center' | 'row';
 }

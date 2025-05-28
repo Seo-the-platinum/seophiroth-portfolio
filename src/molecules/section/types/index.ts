@@ -12,6 +12,23 @@ export type SectionProps = {
   /**
    * The children prop represents the content that will be rendered inside the Section component.
    */
-  children: React.ReactNode
-
+  children?: React.ReactNode;
+  darkMode?: boolean;
+  hasGradientTransition?: boolean;
+  nextComponentIsDark?: boolean;
+  noContain?: boolean;
 }
+
+const sectionProps = ['as', 'noBackground', 'children', 'darkMode', 'hasGradientTransition', 'nextComponentIsDark', 'noContain']
+
+export const splitSectionProps = <T>(props: T extends SectionProps ? T : never) =>
+  Object.entries(props).reduce(
+    (acc, [key, value]) => {
+      if (sectionProps.includes(key)) {
+        return { ...acc, sectionProps: { ...acc.sectionProps, [key]: value } };
+      }
+
+      return { ...acc, rest: { ...acc.rest, [key]: value } };
+    },
+    { sectionProps: {} as SectionProps, rest: {} as Omit<T, keyof SectionProps> },
+  );

@@ -3,4 +3,14 @@
 @theme {
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-sephiroth: #0d0917;
+  --color-body-text: #d1c8e6;
+}
+
+.nav-link.active-link {
+  @apply text-white;
+}
+
+.nav-link {
+  @apply text-body-text uppercase
 }

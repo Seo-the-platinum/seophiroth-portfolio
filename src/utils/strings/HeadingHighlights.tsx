@@ -11,7 +11,7 @@ const HeadingHighlights = ({ heading }: {heading: string}) => {
           segment = str.replace(regex, '').trim();
 
         return matches ? (
-          <span key={i} className="text-gray-900 dark:text-highlight-gradient">
+          <span key={i} className="text-teal-300 font-medium">
             {segment}
           </span>
         ) : (

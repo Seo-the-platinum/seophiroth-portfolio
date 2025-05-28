@@ -17,7 +17,7 @@ const Switchback:FC<SwitchbackProps> = ({reverse}) => {
             />
         </div>
         <div>
-          <p>Asset to go here</p>
+          
         </div>
       </div>
     </Section>
