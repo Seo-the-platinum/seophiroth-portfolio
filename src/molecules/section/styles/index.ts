@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority';
 
-const sectionStyles = cva('relative scroll-mt-16', {
+const sectionStyles = cva('relative scroll-mt-16 py-12', {
   variants: {
     nextComponentIsDark: {
       true: '',

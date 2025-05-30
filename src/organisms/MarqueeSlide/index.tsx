@@ -2,7 +2,7 @@ import type { FC } from 'react'
 import type { MarqueeSlideProps } from './types'
 
 const MarqueeSlide:FC<MarqueeSlideProps> = ({ company, dates, description, skills, title }) =>(
-    <div className="flex gap-4">
+    <li className="flex gap-4 min-w-[680px]">
       <div>
         <p>{dates}</p>
       </div>
@@ -15,7 +15,7 @@ const MarqueeSlide:FC<MarqueeSlideProps> = ({ company, dates, description, skill
           <p>{description}</p>
         </div>
       </div>
-    </div>
+    </li>
   )
 
 export default MarqueeSlide
