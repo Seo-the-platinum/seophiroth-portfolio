@@ -25,7 +25,7 @@ const BodyHighlights = ({ body }: {body: string}) => {
             const linkText = match[1].trim();
             const url = match[2];
             return (
-              <Link className="text-[#905ebd] hover:text-teal-300 ease-in-out duration-500 font-medium" key={i} href={url}>{linkText}</Link>
+              <Link className="text-[#905ebd] hover:text-teal-300 transition-all ease-in-out duration-500 font-medium" key={i} href={url}>{linkText}</Link>
             )
           }
           return <Fragment key={i}>{str}</Fragment>;

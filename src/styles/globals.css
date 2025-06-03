@@ -5,6 +5,9 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-sephiroth: #0d0917;
   --color-body-text: #d1c8e6;
+  --color-primary-highlight: #905ebd;
+  --color-secondary-highlight: var(--color-teal-300);
+  --inset-shadow-slide: inset 0 1px 0 0 rgba(148, 163, 184, .1);
 }
 
 .nav-link.active-link {
@@ -26,13 +29,17 @@
 }
 
 .scroller[data-animated="true"] .scroller-inner {
-  @apply flex-nowrap max-w-max;
+  @apply flex-nowrap w-max;
   animation: scroll 20s linear infinite;
+}
+
+.scroller[data-animated="true"]:hover .scroller-inner {
+  animation-play-state:paused;
 }
 
 @keyframes scroll {
   to {
-    transform: translate(calc(-50% - 0.5rem));
+    transform: translate(calc(-50% - 2rem));
   }
   
 }

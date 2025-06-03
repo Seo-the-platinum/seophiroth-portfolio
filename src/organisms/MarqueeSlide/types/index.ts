@@ -1,9 +1,13 @@
-type Skills = 'Javascript' | 'React' |'TypeScript'| 'GraphQL' | 'Next.js' |'Tailwind CSS' | 'Git' | 'Hubspot';
+type Skills = 'Javascript' | 'React' |'TypeScript'| 'GraphQL' | 'Next.js' |'Tailwind CSS' | 'Github' | 'Hubspot';
 
 export type MarqueeSlideProps = {
-  company: string;
+  company: {
+  url: string;
+  name: string;
+  };
   dates: string;
   title: string;
   description: string;
   skills: Skills[];
+  thumbnail?: string;
 }
