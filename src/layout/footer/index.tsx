@@ -6,9 +6,10 @@ const Footer = () => {
     { name: 'GitHub', url: 'https://github.com', icon: '/icons/github.svg' },
   ]
   return (
-    <footer className="mx-auto w-full max-w-screen-xl px-4 sm:px-16 lg:px-8">
-      <p>Footer Content</p>
-      <Socials />
+    <footer className="mx-auto w-full max-w-screen-xl px-4 sm:px-16 lg:px-8 pb-10">
+      <div className="flex flex-col gap-4">
+        <Socials />
+      </div>
     </footer>
   )
 }

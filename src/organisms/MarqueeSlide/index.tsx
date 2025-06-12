@@ -20,7 +20,7 @@ const MarqueeSlide:FC<MarqueeSlideProps> = ({ company, dates, description, skill
           duration-300 z-0"/>
       <div className="col-span-2 z-10 flex flex-col gap-4 pr-6 items-center">
         <h2 className="text-md font-semibold">{dates}</h2>
-        { thumbnail && <Image alt="Company logo or website" className="size-full rounded-lg" height={100} src={thumbnail} width={100} /> }
+        { thumbnail && <Image alt="Company logo or website" className="w-full rounded-lg aspect-video" height={332} src={thumbnail} width={640}/> }
       </div>
       <div className="flex flex-col gap-4 col-span-6 z-10">
         <div className="flex gap-2 items-center transition-colors duration-600 ease-in-out">

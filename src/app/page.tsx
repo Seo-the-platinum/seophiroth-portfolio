@@ -15,10 +15,10 @@ export default function HomePage() {
           />
       </div>
       <div id="experience">
-        <Marquee/>
+        <Marquee scrollspeed="slow"/>
       </div>
       <div id="projects">
-
+      
       </div>
     </main>
   );
