@@ -6,7 +6,7 @@ import MarqueeSlide from '~/organisms/MarqueeSlide'
 import { experience } from '~/db'
 
 type MarqueeProps = {
-  scrollspeed?: 'slow' | 'fast'
+  scrollspeed?: 'slow' | 'medium'| 'fast'
 }
 const Marquee:FC<MarqueeProps> = ({scrollspeed}) => {
   const scrollerRef = useRef<HTMLDivElement>(null)

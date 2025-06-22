@@ -17,9 +17,11 @@ export type SectionProps = {
   hasGradientTransition?: boolean;
   nextComponentIsDark?: boolean;
   noContain?: boolean;
+  paddingBottom?: 'none' | 'sm' | 'md' | 'lg';
+  paddingTop?: 'none' | 'sm' | 'md' | 'lg';
 }
 
-const sectionProps = ['as', 'noBackground', 'children', 'darkMode', 'hasGradientTransition', 'nextComponentIsDark', 'noContain']
+const sectionProps = ['as', 'noBackground', 'children', 'darkMode', 'hasGradientTransition', 'nextComponentIsDark', 'noContain', 'paddingBottom', 'paddingTop'];
 
 export const splitSectionProps = <T>(props: T extends SectionProps ? T : never) =>
   Object.entries(props).reduce(

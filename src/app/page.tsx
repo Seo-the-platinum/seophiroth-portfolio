@@ -1,6 +1,8 @@
 import HeadingComponent from "~/components/Heading";
 import { aboutBody } from "~/db";
 import Marquee from "~/components/Marquee";
+import Switchback from "~/components/Switchback";
+import { projects } from "~/db";
 export default function HomePage() {
   
   return (
@@ -12,13 +14,40 @@ export default function HomePage() {
           heading="Hi! My name is Seo"
           noBackground={true}
           size="lg"
+          paddingBottom="lg"
+          paddingTop="lg"
           />
       </div>
       <div id="experience">
-        <Marquee scrollspeed="slow"/>
+        <Marquee scrollspeed="medium"/>
       </div>
       <div id="projects">
-      
+        <HeadingComponent
+          alignment='left' 
+          eyebrow="Fun things I made"
+          heading="Projects"
+          noBackground={true}
+          size="lg"
+          paddingTop={'md'}
+          paddingBottom={'lg'}
+          />
+          {
+            projects.map((project, idx)=>(
+              <Switchback 
+                key={project.heading}
+                heading={{
+                  alignment: 'left', 
+                  body: project.body,
+                  eyebrow: project.eyebrow,
+                  heading: project.heading,
+                  size: 'lg',
+                }}
+                paddingTop={idx === 0 ? 'none' : 'lg'}
+                image={project.image}
+                reverse={idx % 2 === 0 ? false : true}
+              />
+            ))
+          }
       </div>
     </main>
   );

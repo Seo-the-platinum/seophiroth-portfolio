@@ -2,8 +2,9 @@ import type { FC } from 'react'
 import type { SectionProps } from './types'
 import sectionStyles from './styles'
 
-const Section: FC<SectionProps> = ({ as, children, darkMode, hasGradientTransition, nextComponentIsDark, noBackground, noContain}) => {
+const Section: FC<SectionProps> = ({ as, children, darkMode, hasGradientTransition, nextComponentIsDark, noBackground, noContain, paddingBottom, paddingTop}) => {
   const Component = as || 'section';
+
   return (
     <Component className={sectionStyles({
         darkMode,
@@ -11,6 +12,8 @@ const Section: FC<SectionProps> = ({ as, children, darkMode, hasGradientTransiti
         noBackground,
         nextComponentIsDark,
         noContain,
+        paddingBottom,
+        paddingTop
       })}>
       <div className="mx-auto max-w-screen-xl px-4 sm:px-16 lg:px-8">{children}</div>
     </Component>

@@ -5,7 +5,7 @@ export const headingMoleculeContainer = cva('grid',{
     alignment: {
       center: 'm-auto max-w-[960px] grid-cols-1 place-items-center text-center grid-cols-1',
       left: '',
-      row: 'grid-cols-2',
+      row: 'grid-cols-1 lg:grid-cols-2',
     },
     size: {
       sm: 'gap-4',

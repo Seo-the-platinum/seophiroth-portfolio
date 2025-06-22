@@ -3,21 +3,21 @@ import type { SwitchbackProps } from './types'
 import Section from '~/molecules/section'
 import { switchbackStyles } from './styles'
 import Heading from '~/molecules/heading'
+import Image from 'next/image'
+import { splitSectionProps } from '~/molecules/section/types'
 
-const Switchback:FC<SwitchbackProps> = ({reverse}) => {
+const Switchback:FC<SwitchbackProps> = (props) => {
+  const { sectionProps, rest} = splitSectionProps(props)
+  const { reverse, heading, image } = rest
+
   return (
-    <Section>
+    <Section {...sectionProps}>
       <div className={switchbackStyles({reverse})}>
-        <div>
-          <Heading 
-            alignment="left" 
-            body="I like to play video games, I used to play drums and music and is something I would like to get back into."
-            eyebrow='Some stuff about me' 
-            heading="Get to know me" 
-            />
+        <div className="lg:basis-1/2">
+          <Heading {...heading}/>
         </div>
-        <div>
-          
+        <div className="rounded-lg overflow-hidden lg:basis-1/2">
+          <Image alt='Final Fantasy vote project thumbnail' src={image} width={640} height={336}/>
         </div>
       </div>
     </Section>

@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority';
 
-const sectionStyles = cva('relative scroll-mt-16 py-12', {
+const sectionStyles = cva('relative scroll-mt-16', {
   variants: {
     nextComponentIsDark: {
       true: '',
@@ -21,6 +21,18 @@ const sectionStyles = cva('relative scroll-mt-16 py-12', {
     noContain: {
       true: '',
       false: 'contain-content',
+    },
+    paddingTop: {
+      none: '',
+      sm: 'pt-4',
+      md: 'pt-8',
+      lg: 'pt-12',
+    },
+    paddingBottom: {
+      none: '',
+      sm: 'pb-4',
+      md: 'pb-8',
+      lg: 'pb-12',
     },
   },
   compoundVariants: [
@@ -51,6 +63,8 @@ const sectionStyles = cva('relative scroll-mt-16 py-12', {
     hasGradientTransition: false,
     noBackground: false,
     noContain: false,
+    paddingTop: 'lg',
+    paddingBottom: 'lg',
   },
 });
 

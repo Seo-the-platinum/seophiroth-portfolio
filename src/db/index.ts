@@ -54,3 +54,19 @@ export const experience:MarqueeSlideProps[] = [
     skills: ['Javascript', 'Html', 'CSS', 'Hubspot','Figma']
   }
 ]
+
+export const projects = [
+  {
+    body: 'Final Fantasy Vote is a personal project I made to improve on my development skills while working with an IP I love. It\'s a voting app for Final Fantasy characters, built with React and Next.js.',
+    eyebrow: 'Something Fun',
+    heading: 'Final Fantasy Vote',
+    image: '/images/ffvote.png',
+
+  },
+  {
+    body: 'Pocket Pool is a fun little project I made to make creating football and basketball pools easier and aetherically pleasing. It\'s built with React and Next.js, and it\'s a great way to keep track of your favorite teams and players.',
+    eyebrow: 'Something Fun',
+    heading: 'Pocket Pool',
+    image: '/images/pocketpool.png',
+  }
+]
