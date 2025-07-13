@@ -3,8 +3,9 @@ import { aboutBody } from "~/db";
 import Marquee from "~/components/Marquee";
 import Switchback from "~/components/Switchback";
 import { projects } from "~/db";
+
+
 export default function HomePage() {
-  
   return (
     <main className="min-h-screen text-gray-100 font-light">
       <div id="about">
@@ -19,6 +20,15 @@ export default function HomePage() {
           />
       </div>
       <div id="experience">
+        <HeadingComponent
+          alignment='left' 
+          eyebrow="Where I've worked"
+          heading="Experience"
+          noBackground={true}
+          size="lg"
+          paddingTop={'md'}
+          paddingBottom={'sm'}
+          />
         <Marquee scrollspeed="medium"/>
       </div>
       <div id="projects">

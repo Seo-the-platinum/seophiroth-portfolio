@@ -9,14 +9,16 @@
   --color-secondary-highlight: var(--color-teal-300);
   --color-primary-icon: #c58ef5;
   --inset-shadow-slide: inset 0 1px 0 0 rgba(148, 163, 184, .1);
+  --animate-gradient-slide-in: gradientSlideIn 1s ease-in-out forwards;
+  --animate-gradient-slide-out: gradientSlideOut 1s ease-in-out forwards;
 }
 
 .nav-link.active-link {
-  @apply text-white;
+  @apply text-transparent bg-gradient-to-tr from-primary-highlight to-secondary-highlight bg-clip-text animate-gradient-slide-in transition-all duration-500 ease-in-out;
 }
 
 .nav-link {
-  @apply text-body-text uppercase
+  @apply text-body-text uppercase animate-gradient-slide-out bg-clip-text transition-all duration-500 ease-in-out;
 }
 
 .scroller {
@@ -59,4 +61,22 @@ body {
     transform: translate(calc(-50% - 2rem));
   }
   
+}
+
+@keyframes gradientSlideIn {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes gradientSlideOut {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
