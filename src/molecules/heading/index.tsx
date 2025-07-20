@@ -17,7 +17,7 @@ const Heading:FC<HeadingMoleculeProps>= ({ as, alignment, body, children, eyebro
   return (
     <div className={headingMoleculeContainer({alignment, size})}>
       {eyebrow && (
-        <span className="font-spaceGrotesk font-semibold text-eyebrow text-overline-sm dark:text-primary-300 text-[#d1c8e6]">
+        <span className="font-spaceGrotesk font-semibold text-eyebrow text-overline-sm dark:text-primary-300 text-primary-eyebrow">
           {eyebrow}
         </span>
       )}

@@ -29,7 +29,7 @@ export default function HomePage() {
           paddingTop={'md'}
           paddingBottom={'sm'}
           />
-        <Marquee scrollspeed="medium"/>
+        <Marquee scrollspeed="fast"/>
       </div>
       <div id="projects">
         <HeadingComponent

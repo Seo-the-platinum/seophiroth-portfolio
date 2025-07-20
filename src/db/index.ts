@@ -1,12 +1,11 @@
 import type { MarqueeSlideProps } from "~/organisms/MarqueeSlide/types";
 
-export const aboutBody = `Feel free to poke [[around| https://google.com]] and see some of the stuff I\'ve built.I\'m a software engineer with a passion for building things that make life easier. I love working with React, Next.js, and TypeScript, and I\'m always looking for new challenges to tackle.
-I have experience in full-stack development, and I enjoy working on both the front-end and back-end. 
+export const aboutBody = `I\'m a software engineer with a passion for building aesthetically pleasing and challenging user interfaces. I love working with Next.js, and TypeScript, and Tailwind Css but am always open to learning new technologies.
 
-I\'m also a big fan of open source, and I love contributing to projects that I find interesting.
-I\'m currently working at [[Webstacks|https://www.webstacks.com/]] as a software engineer, where I\'m building tools to help developers be more productive.
+I take pride in my work and am always open to constructive feedback. I do my best to maintain a good balance between confidence and humility, and I\'m always looking for ways to improve my skills and knowledge.
+Currently, I am working at [[Webstacks|https://www.webstacks.com/]] as a software engineer, where I build pixel perfect websites while working with multiple clients. 
 
-I\'m always looking for new opportunities to learn and grow, so feel free to reach out if you\'d like to chat or collaborate on something interesting!`;
+In my spare time, I enjoy working out, playing video games, and spending time with my family. A Fun fact about me is that I used to play drums and although I don't have much time to play anymore, I can still do a little damage behind the kit.`;
 
 export const experience:MarqueeSlideProps[] = [
   {
