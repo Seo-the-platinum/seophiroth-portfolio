@@ -43,7 +43,8 @@ export default function HomePage() {
           />
           {
             projects.map((project, idx)=>(
-              <Switchback 
+              <Switchback
+                alt={project.alt}
                 key={project.heading}
                 heading={{
                   alignment: 'left', 
@@ -51,10 +52,11 @@ export default function HomePage() {
                   eyebrow: project.eyebrow,
                   heading: project.heading,
                   size: 'lg',
+                  link: project.link
                 }}
-                paddingTop={idx === 0 ? 'none' : 'lg'}
+                paddingTop={'lg'}
                 image={project.image}
-                reverse={idx % 2 === 0 ? false : true}
+                reverse={idx % 2 !== 0 || false}
               />
             ))
           }

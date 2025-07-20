@@ -8,7 +8,7 @@ import { splitSectionProps } from '~/molecules/section/types'
 
 const Switchback:FC<SwitchbackProps> = (props) => {
   const { sectionProps, rest} = splitSectionProps(props)
-  const { reverse, heading, image } = rest
+  const { reverse, heading, image, alt } = rest
 
   return (
     <Section {...sectionProps}>
@@ -17,7 +17,7 @@ const Switchback:FC<SwitchbackProps> = (props) => {
           <Heading {...heading}/>
         </div>
         <div className="rounded-lg overflow-hidden lg:basis-1/2">
-          <Image alt='Final Fantasy vote project thumbnail' src={image} width={640} height={336}/>
+          <Image alt={alt} src={image} width={640} height={336}/>
         </div>
       </div>
     </Section>

@@ -6,4 +6,5 @@ export type SwitchbackProps = {
   reverse?: boolean,
   heading: HeadingComponentProps,
   image: string,
+  alt: string,
 } & SectionProps

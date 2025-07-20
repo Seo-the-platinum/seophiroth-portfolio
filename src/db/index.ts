@@ -56,16 +56,14 @@ export const experience:MarqueeSlideProps[] = [
 
 export const projects = [
   {
-    body: 'Final Fantasy Vote is a personal project I made to improve on my development skills while working with an IP I love. It\'s a voting app for Final Fantasy characters, built with React and Next.js.',
-    eyebrow: 'Something Fun',
-    heading: 'Final Fantasy Vote',
-    image: '/images/ffvote.png',
-
-  },
-  {
-    body: 'Pocket Pool is a fun little project I made to make creating football and basketball pools easier and aetherically pleasing. It\'s built with React and Next.js, and it\'s a great way to keep track of your favorite teams and players.',
-    eyebrow: 'Something Fun',
+    body: 'Pocket Pool is a fun little project I made to make creating and sharing football and basketball pools easier. It\'s built with React and Next.js, and with it\'s real-time updates, enhances the experience of playing with friends and family. It\'s a great way to stay connected and have fun together, even when you\'re apart.',
+    eyebrow: 'Gamble Responsibly',
     heading: 'Pocket Pool',
     image: '/images/pocketpool.png',
+    alt: 'Pocket Pool project thumbnail',
+    link: {
+      href: 'https://pocket-pool-auth.vercel.app/',
+      label: 'Visit Pocket Pool',
+    },
   }
 ]

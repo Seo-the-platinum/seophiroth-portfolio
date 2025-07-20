@@ -3,4 +3,8 @@ export type HeadingMoleculeConfigProps = {
   heading: string
   body?: string
   alignment: 'left' | 'center' | 'row';
+  link?: {
+    href: string
+    label: string
+  }
 }
