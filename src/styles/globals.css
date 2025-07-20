@@ -13,12 +13,12 @@
   --animate-gradient-slide-out: gradientSlideOut 1s ease-in-out forwards;
 }
 
-.nav-link.active-link {
-  @apply text-transparent bg-gradient-to-tr from-primary-highlight to-secondary-highlight bg-clip-text animate-gradient-slide-in transition-all duration-500 ease-in-out;
-}
-
 .nav-link {
-  @apply text-body-text uppercase animate-gradient-slide-out bg-clip-text transition-all duration-500 ease-in-out;
+  @apply 
+  text-transparent
+  uppercase bg-clip-text saturate-200
+  transition-all duration-300 ease-in-out inline-block
+  bg-no-repeat bg-white
 }
 
 .scroller {
@@ -63,20 +63,25 @@ body {
   
 }
 
+
 @keyframes gradientSlideIn {
   0% {
-    background-position: 100% 50%;
+    background-size: 0%;
+    background-image: linear-gradient(to top right, #905ebd, #2dd4bf);
   }
   100% {
-    background-position: 0 50%;
+    background-size: 100%;
+    background-image: linear-gradient(to top right, #905ebd, #2dd4bf);
   }
 }
 
 @keyframes gradientSlideOut {
   0% {
-    background-position: 0 50%;
+    background-size: 100%;
+    background-image: linear-gradient(to top right, #905ebd, #2dd4bf);
   }
   100% {
-    background-position: 100% 50%;
+    background-size: 0%;
+    background-color: white;
   }
 }

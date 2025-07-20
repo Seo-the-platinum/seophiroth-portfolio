@@ -4,7 +4,7 @@ export const aboutBody = `Feel free to poke [[around| https://google.com]] and s
 I have experience in full-stack development, and I enjoy working on both the front-end and back-end. 
 
 I\'m also a big fan of open source, and I love contributing to projects that I find interesting.
-I\'m currently working at [[Google|https://google.com]] as a software engineer, where I\'m building tools to help developers be more productive.
+I\'m currently working at [[Webstacks|https://www.webstacks.com/]] as a software engineer, where I\'m building tools to help developers be more productive.
 
 I\'m always looking for new opportunities to learn and grow, so feel free to reach out if you\'d like to chat or collaborate on something interesting!`;
 
@@ -51,7 +51,7 @@ export const experience:MarqueeSlideProps[] = [
     dates: 'Dec 2025 - Present',
     description: 'Working on a project to build a data security platform using React and Node.js. Focused on building a user-friendly interface and ensuring data integrity and security.',
     thumbnail: '/images/varonis-website.webp',
-    skills: ['Javascript', 'Html', 'CSS', 'Hubspot','Figma']
+    skills: ['Javascript', 'Html', 'CSS', 'Hubspot','Figma'],
   }
 ]
 

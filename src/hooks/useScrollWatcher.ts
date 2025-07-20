@@ -1,15 +1,23 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 
 export const useScrollWatcher = () => {
   const [activeSection, setActiveSection] = useState<string>('');
   const sections = ['about', 'experience', 'projects'];
   const intersectingEntriesRef = useRef<Map<string, IntersectionObserverEntry>>(new Map());
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const useDebounce = useCallback((sectionId: string)=> {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(()=> {
+      setActiveSection(sectionId);
+    }, 100)
+  }, []);
+
   useEffect(() => {
       const observer = new IntersectionObserver(
         entries => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
-              // setActiveSection(entry.target.id);
               intersectingEntriesRef.current.set(entry.target.id, entry);
             } else {
               intersectingEntriesRef.current.delete(entry.target.id);
@@ -28,9 +36,11 @@ export const useScrollWatcher = () => {
           });
 
           if (found) {
-            setActiveSection(highestRatioEntry);
+            // setActiveSection(highestRatioEntry);
+            useDebounce(highestRatioEntry);
           } else if (intersectingEntriesRef.current.size === 0) {
             setActiveSection(''); // Reset if no sections are intersecting
+            useDebounce(''); // Reset debounce
           }
         },
         {
