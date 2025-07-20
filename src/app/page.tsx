@@ -47,11 +47,12 @@ export default function HomePage() {
                 alt={project.alt}
                 key={project.heading}
                 heading={{
+                  as: 'h3',
                   alignment: 'left', 
                   body: project.body,
                   eyebrow: project.eyebrow,
                   heading: project.heading,
-                  size: 'lg',
+                  size: 'md',
                   link: project.link
                 }}
                 paddingTop={'lg'}

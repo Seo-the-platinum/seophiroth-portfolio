@@ -9,6 +9,7 @@ export const headingMoleculeContainer = cva('grid',{
     },
     size: {
       sm: 'gap-4',
+      md: 'gap-6',
       lg: 'gap-6',
     },
   },
@@ -21,6 +22,7 @@ export const headingStyles = cva('col-start-1 font-semibold text-heading',{
   variants: {
     size: {
       sm: 'text-display-sm dark:text-white sm:text-display-lg',
+      md: 'text-xl sm:text-2xl lg:text-3xl',
       lg: 'text-3xl sm:text-4xl lg:text-5xl',
     }
   },
