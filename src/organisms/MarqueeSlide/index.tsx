@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const MarqueeSlide:FC<MarqueeSlideProps> = ({ company, dates, description, skills, thumbnail, title }) =>(
-    <li className="grid grid-cols-8 p-2 rounded-2xl transition-all duration-300 ease-in-out group max-w-[800px] relative">
+    <li className="grid grid-cols-8 p-2 rounded-2xl group max-w-[800px] relative">
       <div 
         className="
           absolute 
